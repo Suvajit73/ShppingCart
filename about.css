@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500; 
+  }
+  
+  nav ul li a:hover {
+    color: darkred; 
+  }
+  
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 8px 30px 8px 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-box i {
+    position: absolute;
+    right: 10px;
+    color: gray;
+    pointer-events: none;
+}
+
+/* Our Story */
+.story-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 40px;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.story-content {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 100px;
+}
+
+.story-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.story-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.story-image {
+    flex: 1;
+    padding-left: 90px;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 600px;
+
+    border-radius: 8px;
+}
+
+/* Stats */
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* space between boxes */
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.stat-box {
+    flex: 0 0 280px;
+    /* fixed width of 120px */
+    max-width: 320px;
+    /* prevents it from growing */
+    min-height: 160px;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    /* Light gray border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+    background-color: #DB4444;
+    color: white;
+}
+
+
+/* Team */
+.team-section {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    text-align: center;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+}
+
+.team-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.team-section::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.team-section {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    text-align: center;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+}
+
+.team-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.team-section::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box {
+    width: 250px;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    margin: 10px 0 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+
+
+/* Services */
+.services-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: transparent;
+    flex-wrap: wrap;
+    
+}
+
+.service {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.footer input {
+    width: 100%;
+    padding: 6px;
+    margin: 10px 0;
+}
+
+.footer button {
+    padding: 6px 12px;
+    background-color: #db3f3f;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.footer img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 13px;
+    border-top: 1px solid #333;
+    color: #888;
+}

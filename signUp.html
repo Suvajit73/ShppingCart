@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Exclusive</title>
+    <link rel="stylesheet" href="signUp.css" />
+</head>
+
+<body>
+    <header>
+        <h2>Exclusive</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About </a></li>
+                <li><a href="signUp.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <div class="search-box">
+                <input type="text" placeholder="What are you looking for?" />
+                <img src="./Assets/search.svg" alt="search" style="width: 30px; height: 30px;" />
+            </div>
+            <!-- <img src="./Assets/Wishlist.svg" alt="Wishlist" style="width: 35px; height: 35px;" />
+            <img src="./Assets/curtIcon.svg" alt="Cart" style="width: 35px; height: 35px;" /> -->
+        </div>
+
+    </header>
+
+    <main class="main-container">
+        <div class="image-section">
+            <img src="./Assets/signupPhoto.svg" alt="Phone and cart" style="width: 550px; height: 550px;" />
+        </div>
+        <div class="form-section">
+            <h2>Create an account</h2>
+            <p style="font-weight: bold;">Enter your details below </p>
+            <form>
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email or Phone Number" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit" class="btn-red">Create Account</button>
+                <button type="button" class="btn-google">
+                    <img src="./Assets/Icon-Google.svg" alt="Google Icon" class="google-icon" />
+                    <span>Sign up with Google</span>
+                </button>
+                <p class="login-link">Already have account? <a href="#">Log in</a></p>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

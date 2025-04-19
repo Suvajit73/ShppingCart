@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input {
+    padding: 8px 30px 8px 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-box i {
+    position: absolute;
+    right: 10px;
+    color: gray;
+    pointer-events: none;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500; 
+  }
+  
+  nav ul li a:hover {
+    color: darkred; 
+  }
+  
+  
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 80px);
+  }
+  
+  .image-section {
+    flex: 1 1 400px;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .form-section {
+    flex: 1 1 400px;
+    max-width: 450px;
+    padding: 20px;
+  }
+  
+  .form-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .form-section p {
+    margin-bottom: 20px;
+    color: #777;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    border-bottom-color: #db3f3f; /* red on focus */
+  }
+  
+  
+  .btn-red {
+    background-color: #db3f3f;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* space between icon and text */
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+  }
+  
+  .login-link a {
+    text-decoration: underline;
+    text-underline-offset: 6px; /* adjust the gap here */
+    color: #000;
+    font-weight: bold;
+  }
+  

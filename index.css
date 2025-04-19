@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    cursor: pointer;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500; /* optional for better visibility */
+  }
+  
+  nav ul li a:hover {
+    color: darkred; /* optional hover effect */
+  }
+  
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input {
+    padding: 8px 30px 8px 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-box i {
+    position: absolute;
+    right: 10px;
+    color: gray;
+    pointer-events: none;
+  }
+
+  .dark{
+    margin-left: 20px;
+  }
+  
+  
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 350px;
+    height: 380px;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding-left: 120px;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .banner {
+    width: 90%;
+    background: #000;
+    color: #fff;
+    padding: 35px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .apple-icon {
+    width: 100px;  /* Adjust size here */
+    height: auto;
+    vertical-align: middle;
+    margin-bottom: 5px; /* Optional tweak */
+  }
+  
+  
+  .flash-sales {
+    margin-top: 30px;
+    margin-left: 55px;
+    margin-right: 55px;
+  }
+
+  .todays{
+    padding-bottom: 20px;
+  }
+  
+  .flash-text {
+    font-size: 30px;
+  }
+
+  .time-text {
+    margin-left: 90px; /* Adjust space as needed */
+  }
+
+  .countdown {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .products {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+  }
+  
+  .product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 180px;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product h4,
+  .product p {
+    margin: 5px 0;
+  }
+  
+  .price {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .discount {
+    color: red;
+  }
+  
+  .view-all-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 90px;
+  }
+  
+  /* Dark Theme Styles */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-theme header,
+.dark-theme .sidebar,
+.dark-theme .banner,
+.dark-theme .product,
+.dark-theme .flash-sales {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-theme .product {
+  color: white;
+}
+
+.dark-theme .old-price {
+  color: #aaa;
+}
