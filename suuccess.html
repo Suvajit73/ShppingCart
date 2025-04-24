@@ -11,23 +11,34 @@
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
-    body {
+    html, body {
       height: 100vh;
-      background: linear-gradient(135deg, #6EE7B7, #3B82F6);
+      overflow: hidden;
+    }
+    body {
+      /* remove gradient, canvas will cover */
+      background: black;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
-
+    #fireworks {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+    }
     .glow-wrapper {
+      /* same centering as before */
       padding: 5px;
       border-radius: 25px;
       background: linear-gradient(45deg, #3B82F6, #10B981, #EC4899, #F59E0B);
       background-size: 400% 400%;
       animation: glow 8s ease infinite;
+      position: relative;
+      z-index: 2;
     }
-
     .card {
       background: white;
       padding: 3rem 4rem;
@@ -37,19 +48,16 @@
       position: relative;
       z-index: 2;
     }
-
     h1 {
       color: #10B981;
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-
     p {
       font-size: 1.2rem;
       color: #555;
       margin-bottom: 2rem;
     }
-
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -62,11 +70,9 @@
       text-decoration: none;
       transition: background 0.3s ease;
     }
-
     .btn:hover {
       background-color: #2563EB;
     }
-
     @keyframes glow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -75,6 +81,8 @@
   </style>
 </head>
 <body>
+  <canvas id="fireworks"></canvas>
+
   <div class="glow-wrapper">
     <div class="card">
       <h1>Login Successful!</h1>
@@ -82,5 +90,92 @@
       <a href="index.html" class="btn">Go to Home</a>
     </div>
   </div>
+
+  <script>
+    const canvas = document.getElementById('fireworks');
+    const ctx = canvas.getContext('2d');
+    let W = canvas.width = window.innerWidth;
+    let H = canvas.height = window.innerHeight;
+    window.addEventListener('resize', () => {
+      W = canvas.width = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    });
+
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    class Particle {
+      constructor(x, y, color) {
+        this.x = x; this.y = y;
+        this.color = color;
+        this.angle = random(0, Math.PI * 2);
+        this.speed = random(1, 6);
+        this.friction = 0.98;
+        this.gravity = 0.05;
+        this.opacity = 1;
+        this.decay = random(0.005, 0.02);
+      }
+      update() {
+        this.speed *= this.friction;
+        this.x += Math.cos(this.angle) * this.speed;
+        this.y += Math.sin(this.angle) * this.speed + this.gravity;
+        this.opacity -= this.decay;
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    class Firework {
+      constructor() {
+        this.x = random(100, W - 100);
+        this.y = random(100, H - 100);
+        this.color = `hsl(${random(0, 360)}, 100%, 50%)`;
+        this.particles = [];
+        for (let i = 0; i < 80; i++) {
+          this.particles.push(new Particle(this.x, this.y, this.color));
+        }
+      }
+      update() {
+        this.particles.forEach((p, i) => {
+          p.update();
+          if (p.opacity <= p.decay) this.particles.splice(i, 1);
+        });
+      }
+      draw() {
+        this.particles.forEach(p => p.draw());
+      }
+    }
+
+    let fireworks = [];
+    function animate() {
+      requestAnimationFrame(animate);
+      // trail effect
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillRect(0, 0, W, H);
+
+      if (Math.random() < 0.05) {
+        fireworks.push(new Firework());
+      }
+
+      fireworks.forEach((fw, i) => {
+        fw.update();
+        fw.draw();
+        if (fw.particles.length === 0) fireworks.splice(i, 1);
+      });
+    }
+
+    // initialize background
+    ctx.fillStyle = 'black';
+    ctx.fillRect(0, 0, W, H);
+    animate();
+  </script>
 </body>
 </html>
