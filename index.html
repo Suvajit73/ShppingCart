@@ -2,16 +2,21 @@
 <html lang="en">
 
 <head>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Store</title>
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
+
     <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
     <header>
         <h2>Exclusive</h2>
+        <div class="menu-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -27,9 +32,10 @@
             </div>
             <img src="./Assets/Wishlist.svg" alt="Wishlist" style="width: 35px; height: 35px;" />
             <img src="./Assets/curtIcon.svg" alt="Cart" style="width: 35px; height: 35px;" />
-            <button class="dark">dark</button>
+            <ion-icon name="moon-outline" class="dark"></ion-icon>
+
         </div>
-       
+
 
     </header>
 
@@ -56,167 +62,157 @@
                     </span>
                     <h1>iPhone 14 Series</h1>
                     <p>Up to 10% off Voucher</p>
-                    <button>Shop Now</button>
+                    <button class="shop_now">Shop Now</button>
                 </div>
                 <img src="./Assets/apple image.svg" alt="iPhone banner" />
             </section>
 
-           
+
         </main>
 
-        
+
 
     </div>
 
     <section class="flash-sales">
-        <img src="./Assets/todays.svg" alt="" class="todays">
-        
-        <div class="countdown">
-            <div>
-              <span class="flash-text">
-                Flash-Sales
-                <span class="time-text">03 : 23 : 19 : 56</span>
-              </span>
+        <img src="./Assets/todays.svg" alt="Today's" class="todays" />
+
+        <div class="countdown-container">
+            <span class="flash-text">Flash Sales</span>
+            <div class="countdown">
+                <!-- Added labels and structured divs for days, hours, minutes, seconds -->
+                <div>
+                    <div class="label">Days</div>
+                    <div class="value">03</div>
+                </div>
+                <div>
+                    <div class="label">Hours</div>
+                    <div class="value">23</div>
+                </div>
+                <div>
+                    <div class="label">Minutes</div>
+                    <div class="value">19</div>
+                </div>
+                <div>
+                    <div class="label">Seconds</div>
+                    <div class="value">56</div>
+                </div>
             </div>
+
+
+            <div class="slide-btn">
+                <img src="./Assets/Left-Arrow.svg" alt="Slide Left" class="arrow_slide" />
+                <img src="./Assets/Righ- Arrow.svg" alt="Slide Right" class="arrow_slide"/>
+
+            </div>
+
         </div>
 
         <div class="products">
+            <!-- Example product: inserted star rating and discount label -->
             <div class="product">
-                <img src="./Assets/gamepad.svg" alt="Gamepad" />
+
+                <img src="./Assets/gamepad.svg" alt="Keyboard" />
                 <h4>HAVIT HV-G92 Gamepad</h4>
                 <div class="price">
                     <span>$120</span>
                     <span class="old-price">$160</span>
                 </div>
-                <p class="discount">-40%</p>
+                <div class="stars">★★★★★ (88)</div>
             </div>
+
             <div class="product">
-                <img src="./Assets/Keyboard.svg" alt="Keyboard" />
-                <h4>AK-900 Wired Keyboard</h4>
-                <div class="price">
-                    <span>$960</span>
-                    <span class="old-price">$1160</span>
-                </div>
-                <p class="discount">-32%</p>
-            </div>
-            <div class="product">
+
                 <img src="./Assets/Monitor.svg" alt="Monitor" />
                 <h4>IPS LCD Gaming Monitor</h4>
                 <div class="price">
                     <span>$370</span>
                     <span class="old-price">$400</span>
                 </div>
-                <p class="discount">-30%</p>
+                <div class="stars">★★★★★ (99)</div>
             </div>
+
             <div class="product">
+
                 <img src="./Assets/Chair.svg" alt="Chair" />
                 <h4>S-Series Comfort Chair</h4>
                 <div class="price">
                     <span>$375</span>
                     <span class="old-price">$400</span>
                 </div>
-                <p class="discount">-25%</p>
+                <div class="stars">★★★★☆ (89)</div>
             </div>
+
             <div class="product">
-                <img src="./Assets/gamepad.svg" alt="Gamepad" />
+
+                <img src="./Assets/gamepad.svg" alt="Keyboard" />
                 <h4>HAVIT HV-G92 Gamepad</h4>
                 <div class="price">
                     <span>$120</span>
                     <span class="old-price">$160</span>
                 </div>
-                <p class="discount">-40%</p>
+                <div class="stars">★★★★★ (88)</div>
             </div>
+
             <div class="product">
-                <img src="./Assets/Keyboard.svg" alt="Keyboard" />
-                <h4>AK-900 Wired Keyboard</h4>
-                <div class="price">
-                    <span>$960</span>
-                    <span class="old-price">$1160</span>
-                </div>
-                <p class="discount">-32%</p>
-            </div>
-            <div class="product">
+
                 <img src="./Assets/Monitor.svg" alt="Monitor" />
                 <h4>IPS LCD Gaming Monitor</h4>
                 <div class="price">
                     <span>$370</span>
                     <span class="old-price">$400</span>
                 </div>
-                <p class="discount">-30%</p>
+                <div class="stars">★★★★★ (99)</div>
             </div>
+
             <div class="product">
+
                 <img src="./Assets/Chair.svg" alt="Chair" />
                 <h4>S-Series Comfort Chair</h4>
                 <div class="price">
                     <span>$375</span>
                     <span class="old-price">$400</span>
                 </div>
-                <p class="discount">-25%</p>
+                <div class="stars">★★★★☆ (89)</div>
             </div>
+
             <div class="product">
-                <img src="./Assets/Keyboard.svg" alt="Keyboard" />
-                <h4>AK-900 Wired Keyboard</h4>
-                <div class="price">
-                    <span>$960</span>
-                    <span class="old-price">$1160</span>
-                </div>
-                <p class="discount">-32%</p>
-            </div>
-            <div class="product">
-                <img src="./Assets/Monitor.svg" alt="Monitor" />
-                <h4>IPS LCD Gaming Monitor</h4>
-                <div class="price">
-                    <span>$370</span>
-                    <span class="old-price">$400</span>
-                </div>
-                <p class="discount">-30%</p>
-            </div>
-            <div class="product">
-                <img src="./Assets/Chair.svg" alt="Chair" />
-                <h4>S-Series Comfort Chair</h4>
-                <div class="price">
-                    <span>$375</span>
-                    <span class="old-price">$400</span>
-                </div>
-                <p class="discount">-25%</p>
-            </div>
-            <div class="product">
-                <img src="./Assets/gamepad.svg" alt="Gamepad" />
+
+                <img src="./Assets/gamepad.svg" alt="Keyboard" />
                 <h4>HAVIT HV-G92 Gamepad</h4>
                 <div class="price">
                     <span>$120</span>
                     <span class="old-price">$160</span>
                 </div>
-                <p class="discount">-40%</p>
+                <div class="stars">★★★★★ (88)</div>
             </div>
+
             <div class="product">
-                <img src="./Assets/Keyboard.svg" alt="Keyboard" />
-                <h4>AK-900 Wired Keyboard</h4>
-                <div class="price">
-                    <span>$960</span>
-                    <span class="old-price">$1160</span>
-                </div>
-                <p class="discount">-32%</p>
-            </div>
-            <div class="product">
+
                 <img src="./Assets/Monitor.svg" alt="Monitor" />
                 <h4>IPS LCD Gaming Monitor</h4>
                 <div class="price">
                     <span>$370</span>
                     <span class="old-price">$400</span>
                 </div>
-                <p class="discount">-30%</p>
+                <div class="stars">★★★★★ (99)</div>
             </div>
+
             <div class="product">
+
                 <img src="./Assets/Chair.svg" alt="Chair" />
                 <h4>S-Series Comfort Chair</h4>
                 <div class="price">
                     <span>$375</span>
                     <span class="old-price">$400</span>
                 </div>
-                <p class="discount">-25%</p>
+                <div class="stars">★★★★☆ (89)</div>
             </div>
+
+            <!-- Duplicate or add more products similarly -->
         </div>
+
+
         <button class="view-all-btn">View All Products</button>
     </section>
     <script src="darkTheam.js"></script>

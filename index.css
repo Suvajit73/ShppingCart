@@ -1,188 +1,289 @@
+/* General reset */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-  
-  nav ul li {
-    cursor: pointer;
-  }
-  nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500; /* optional for better visibility */
-  }
-  
-  nav ul li a:hover {
-    color: darkred; /* optional hover effect */
-  }
-  
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .search-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-box input {
-    padding: 8px 30px 8px 10px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .search-box i {
-    position: absolute;
-    right: 10px;
-    color: gray;
-    pointer-events: none;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .dark{
-    margin-left: 20px;
-  }
-  
-  
-  .container {
-    display: flex;
-  }
-  
-  .sidebar {
-    width: 350px;
-    height: 380px;
-    padding: 20px;
-    background: #f9f9f9;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding-left: 120px;
-  }
-  
-  .sidebar ul li {
-    padding: 10px 0;
-    cursor: pointer;
-  }
-  
-  .main {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .banner {
-    width: 90%;
-    background: #000;
-    color: #fff;
-    padding: 35px;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
+/* Header styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  background-color: white; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
 
-  .apple-icon {
-    width: 100px;  /* Adjust size here */
-    height: auto;
-    vertical-align: middle;
-    margin-bottom: 5px; /* Optional tweak */
-  }
-  
-  
-  .flash-sales {
-    margin-top: 30px;
-    margin-left: 55px;
-    margin-right: 55px;
-  }
+header h2 {
+  margin: 0;
+}
 
-  .todays{
-    padding-bottom: 20px;
-  }
-  
-  .flash-text {
-    font-size: 30px;
-  }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
 
-  .time-text {
-    margin-left: 90px; /* Adjust space as needed */
-  }
+nav ul li {
+  cursor: pointer;
+}
 
-  .countdown {
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
 
-  .products {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-  }
+nav ul li a:hover {
+  color: rgb(245, 10, 10);
+}
+
+/* Search Bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
   
-  .product {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    min-width: 180px;
-  }
+}
+
+.search-box input {
+  padding: 8px 30px 8px 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box img {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
   
-  .product img {
-    width: 100%;
-    height: auto;
-  }
+  cursor: pointer;
+}
+
+.search-bar > img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.dark {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* Flexbox Layout for Containers */
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 350px;
+  height: 380px;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 120px;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.banner {
+  width: 90%;
+  background: #000;
+  color: #fff;
+  padding: 35px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.apple-icon {
+  width: 130px;
+  height: auto;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.shop_now:hover {
+  background-color: rgb(172, 7, 7);
+}
+
+/* Flash Sales Section */
+.flash-sales {
+  justify-content: space-around;
   
-  .product h4,
-  .product p {
-    margin: 5px 0;
-  }
+  margin: 30px 120px;
+}
+
+.todays {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.countdown-container {
+  display: flex;
+  align-items: center;
+ 
+  margin-bottom: 20px;
+}
+
+.flash-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.countdown {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  margin-left: 100px;
+  margin-bottom: 15px;
+}
+
+/* Added labels above numbers */
+.countdown div {
+  text-align: center;
+}
+
+.countdown .label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.countdown .value {
+  font-size: 24px;
+}
+
+.products {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.product {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 200px;
+  background: #fff;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product h4 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+
+/* Star rating */
+.stars {
+  margin-top: 8px;
+  color: rgb(252, 199, 6);
+  font-size: 20px;
+}
+
+/* arrow buttons for slide the products--------------------*/
+.slide-btn{
+  margin-left: 55%;
   
-  .price {
-    display: flex;
-    gap: 10px;
-  }
+}
+
+.slide-btn-left{
+  background-color: white;
+  border-color: white;
+
   
-  .old-price {
-    text-decoration: line-through;
-    color: gray;
-  }
+}
+.slide-btn-right{
+  background-color: white;
+  border-color: white;
   
-  .discount {
-    color: red;
-  }
-  
-  .view-all-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background: red;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 90px;
-  }
-  
-  /* Dark Theme Styles */
+}
+
+
+
+.products::-webkit-scrollbar { display: none; }
+.products { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+/*last button-------------------*/
+.view-all-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-all-btn {
+  background-color: #c7baba;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: black;
+  border: red;
+  border-style: solid;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 90px;
+}
+
+.view-all-btn:hover {
+  background-color: red;
+  color: white;
+  border-color: rgb(6, 6, 59);
+}
+
+/* Dark Theme Styles */
 .dark-theme {
   background-color: #121212;
   color: #ffffff;
@@ -203,4 +304,140 @@ body {
 
 .dark-theme .old-price {
   color: #aaa;
+}
+
+/* Nav Links for Dark Theme */
+.dark-theme nav ul li a {
+  color: #ffffff;
+}
+
+.dark-theme nav ul li a:hover {
+  color: #ff9999;
+}
+
+/* Search and Icons for Dark Theme */
+.dark-theme .search-box input {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+.dark-theme .search-box input::placeholder {
+  color: #bbbbbb;
+}
+
+.dark-theme .search-box img,
+.dark-theme .search-bar > img {
+  filter: brightness(1000%) invert(1);
+}
+
+/* Hamburger Menu and Navbar for Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 250px;
+    padding-left: 40px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .banner div {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search-bar {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .flash-sales {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .product {
+    min-width: 150px;
+  }
+}
+
+/* Hamburger Menu for smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-bar {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .search-box input {
+    width: 150px;
+  }
+
+  .search-bar > img {
+    margin-top: 10px;
+  }
+
+  .search-bar .dark {
+    margin-left: 10px;
+  }
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Message</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #6EE7B7, #3B82F6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glow-wrapper {
+      padding: 5px;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #3B82F6, #10B981, #EC4899, #F59E0B);
+      background-size: 400% 400%;
+      animation: glow 8s ease infinite;
+    }
+
+    .card {
+      background: white;
+      padding: 3rem 4rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      color: #10B981;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3B82F6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2563EB;
+    }
+
+    @keyframes glow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-wrapper">
+    <div class="card">
+      <h1>Login Successful!</h1>
+      <p>Welcome back to your dashboard.</p>
+      <a href="index.html" class="btn">Go to Home</a>
+    </div>
+  </div>
+</body>
+</html>

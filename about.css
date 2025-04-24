@@ -12,6 +12,10 @@ body {
 
 /* Header */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,17 +37,18 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-weight: 500; 
-  }
-  
-  nav ul li a:hover {
-    color: darkred; 
-  }
-  
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: darkred;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: nowrap;
 }
 
 .search-box {
@@ -54,16 +59,25 @@ nav ul li a {
 
 .search-box input {
     padding: 8px 30px 8px 10px;
-    width: 200px;
+    width: 220px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    cursor: pointer;
 }
 
-.search-box i {
+.search-box img {
     position: absolute;
     right: 10px;
-    color: gray;
+    width: 30px;
+    height: 30px;
     pointer-events: none;
+    cursor: pointer;
+}
+
+.search-bar>img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
 
 /* Our Story */
@@ -72,7 +86,6 @@ nav ul li a {
     flex-wrap: wrap;
     padding: 60px 40px;
     align-items: center;
-
     gap: 40px;
 }
 
@@ -100,7 +113,6 @@ nav ul li a {
 .story-image img {
     width: 100%;
     max-width: 600px;
-
     border-radius: 8px;
 }
 
@@ -109,24 +121,19 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* space between boxes */
     justify-content: space-around;
     padding: 20px;
 }
 
 .stat-box {
     flex: 0 0 280px;
-    /* fixed width of 120px */
     max-width: 320px;
-    /* prevents it from growing */
     min-height: 160px;
     text-align: center;
     margin: 10px;
     padding: 20px;
     border: 2px solid #ddd;
-    /* Light gray border */
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
 }
@@ -136,29 +143,7 @@ nav ul li a {
     color: white;
 }
 
-
 /* Team */
-.team-section {
-    display: flex;
-    justify-content: flex-start;
-    padding: 40px;
-    gap: 20px;
-    flex-wrap: nowrap;
-    text-align: center;
-    overflow-x: auto;
-    scrollbar-width: thin;
-    -ms-overflow-style: none;
-}
-
-.team-section::-webkit-scrollbar {
-    height: 8px;
-}
-
-.team-section::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-}
-
 .team-section {
     display: flex;
     justify-content: flex-start;
@@ -215,8 +200,6 @@ nav ul li a {
     margin-top: 8px;
 }
 
-
-
 /* Services */
 .services-section {
     display: flex;
@@ -224,7 +207,6 @@ nav ul li a {
     padding: 40px 20px;
     background-color: transparent;
     flex-wrap: wrap;
-    
 }
 
 .service {
@@ -263,7 +245,7 @@ nav ul li a {
 
 .footer img {
     width: 100px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .footer h4 {
@@ -275,10 +257,168 @@ nav ul li a {
     font-size: 14px;
 }
 
+
+.footer-subscribe {
+    position: relative;
+    width: 217px;
+    height: 48px;
+    margin: 10px 0;
+}
+
+
+.footer-subscribe input {
+    width: 100%;
+    padding: 8px 40px 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #111;
+    color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+.footer-subscribe button {
+    position: absolute;
+    top: 40%;
+    right: 4px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.footer-subscribe button .send-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+
+
+.footer-subscribe button:hover svg {
+    color: #db3f3f;
+}
+
 .copyright {
     text-align: center;
     padding-top: 10px;
     font-size: 13px;
     border-top: 1px solid #333;
     color: #888;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .story-content {
+        margin-left: 40px;
+    }
+
+    .story-image {
+        padding-left: 40px;
+    }
+
+    .search-box input {
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .search-bar {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .search-box input {
+        width: 140px;
+    }
+
+    .story-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .story-content,
+    .story-image {
+        margin-left: 0;
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 90%;
+    }
+
+    .team-section {
+        padding: 20px;
+    }
+
+    .img-box {
+        width: 200px;
+        height: 250px;
+    }
+
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        max-width: 300px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box input {
+        width: 100px;
+    }
+
+    .search-bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .story-content h2 {
+        font-size: 26px;
+    }
+
+    .team-member h4 {
+        font-size: 16px;
+    }
+
+    .footer img {
+        width: 80px;
+    }
+
+    .footer p {
+        font-size: 13px;
+    }
 }

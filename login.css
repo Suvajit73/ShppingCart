@@ -37,40 +37,27 @@ nav ul li {
   display: flex;
   align-items: center;
   gap: 15px;
-  flex-wrap: nowrap;
 }
 
 .search-box {
   position: relative;
   display: flex;
   align-items: center;
-
 }
 
 .search-box input {
   padding: 8px 30px 8px 10px;
-  width: 220px;
+  width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  cursor: pointer;
 }
 
-.search-box img {
+.search-box i {
   position: absolute;
   right: 10px;
-  width: 30px;
-  height: 30px;
+  color: gray;
   pointer-events: none;
-
-  cursor: pointer;
 }
-
-.search-bar>img {
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-}
-
 
 nav ul li a {
   text-decoration: none;
@@ -139,7 +126,7 @@ form input:focus {
 }
 
 
-#btn-red {
+#login-btn {
   background-color: #db3f3f;
   color: white;
   border: none;
@@ -149,27 +136,6 @@ form input:focus {
   margin-bottom: 15px;
   cursor: pointer;
 }
-
-.btn-google {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  /* space between icon and text */
-  background-color: white;
-  color: #333;
-  border: 1px solid #ccc;
-  padding: 12px;
-  width: 100%;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.google-icon {
-  width: 20px;
-  height: 20px;
-}
-
 
 .login-link {
   text-align: center;
@@ -185,6 +151,8 @@ form input:focus {
   font-weight: bold;
 }
 
+
+/* footer section */
 .footer {
   background-color: #111;
   color: white;

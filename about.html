@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Exclusive</title>
   <link rel="stylesheet" href="about.css" />
 </head>
+
 <body>
 
   <!-- Header -->
   <header>
     <h2>Exclusive</h2>
+    <div class="menu-toggle">
+      <ion-icon name="menu-outline"></ion-icon>
+    </div>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About </a></li>
-            <li><a href="signUp.html">Sign Up</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About </a></li>
+        <li><a href="signUp.html">Sign Up</a></li>
+      </ul>
     </nav>
     <div class="search-bar">
-        <div class="search-box">
-            <input type="text" placeholder="What are you looking for?" />
-            <img src="./Assets/search.svg" alt="search" style="width: 30px; height: 30px;" />
-        </div>
-        <img src="./Assets/Wishlist.svg" alt="Wishlist" style="width: 35px; height: 35px;" />
-        <img src="./Assets/curtIcon.svg" alt="Cart" style="width: 35px; height: 35px;" />
-        <img src="./Assets/user.svg" alt="Cart" style="width: 35px; height: 35px;" />
+      <div class="search-box">
+        <input type="text" placeholder="What are you looking for?" />
+        <img src="./Assets/search.svg" alt="search" style="width: 30px; height: 30px;" />
+      </div>
+      <img src="./Assets/Wishlist.svg" alt="Wishlist" style="width: 35px; height: 35px;" />
+      <img src="./Assets/curtIcon.svg" alt="Cart" style="width: 35px; height: 35px;" />
+      <img src="./Assets/user.svg" alt="user" style="width: 35px; height: 35px;" />
     </div>
 
-</header>
+  </header>
 
   <!-- Our Story -->
   <section class="story-section">
@@ -48,7 +55,7 @@
       </p>
     </div>
     <div class="story-image">
-      <img src="./Assets/Side Image about.svg" alt="Our Story"   />
+      <img src="./Assets/Side Image about.svg" alt="Our Story" />
     </div>
   </section>
 
@@ -75,21 +82,21 @@
       <p>Annual gross sales on site</p>
     </div>
   </section>
-  
+
 
   <!-- Team Section -->
-  <section class="team-section">    
+  <section class="team-section">
     <div class="team-member">
-        <div class="img-box">
-          <img src="./Assets/Tom.svg" alt="Tom Cruise" />
-        </div>
-        <h4>Tom Cruise</h4>
-        <p>Founder & Chairman</p>
-        <div class="social-icons">
-            <img src="./Assets/Icon-Twitter.svg" alt="">
-            <img src="./Assets/icon-insta.svg" alt="">
-            <img src="./Assets/Icon-Linkedin.svg" alt="">
-        </div>
+      <div class="img-box">
+        <img src="./Assets/Tom.svg" alt="Tom Cruise" />
+      </div>
+      <h4>Tom Cruise</h4>
+      <p>Founder & Chairman</p>
+      <div class="social-icons">
+        <img src="./Assets/Icon-Twitter.svg" alt="">
+        <img src="./Assets/icon-insta.svg" alt="">
+        <img src="./Assets/Icon-Linkedin.svg" alt="">
+      </div>
     </div>
 
     <div class="team-member">
@@ -119,16 +126,16 @@
     </div>
 
     <div class="team-member">
-        <div class="img-box">
-          <img src="./Assets/Tom.svg" alt="Tom Cruise" />
-        </div>
-        <h4>Tom Cruise</h4>
-        <p>Founder & Chairman</p>
-        <div class="social-icons">
-            <img src="./Assets/Icon-Twitter.svg" alt="">
-            <img src="./Assets/icon-insta.svg" alt="">
-            <img src="./Assets/Icon-Linkedin.svg" alt="">
-        </div>
+      <div class="img-box">
+        <img src="./Assets/Tom.svg" alt="Tom Cruise" />
+      </div>
+      <h4>Tom Cruise</h4>
+      <p>Founder & Chairman</p>
+      <div class="social-icons">
+        <img src="./Assets/Icon-Twitter.svg" alt="">
+        <img src="./Assets/icon-insta.svg" alt="">
+        <img src="./Assets/Icon-Linkedin.svg" alt="">
+      </div>
     </div>
 
     <div class="team-member">
@@ -181,8 +188,16 @@
         <h4>Exclusive</h4>
         <p>Subscribe</p>
         <p>Get 10% off your first product</p>
-        <input type="text" placeholder="Enter your email" />
-        <button>Subscribe</button>
+        <!-- <input type="text" placeholder="Enter your email" />
+        <button>Subscribe</button> -->
+
+        <div class="footer-subscribe">
+          <input type="text" placeholder="Enter your email" />
+          <button aria-label="Subscribe">
+            <img src="./Assets/foot-icon-send.svg" alt="Send" class="send-icon" />
+          </button>
+        </div>
+
       </div>
       <div>
         <h4>Support</h4>
@@ -208,7 +223,7 @@
       </div>
       <div>
         <h4>Download App</h4>
-        <img src="./Assets/footer scan.svg" alt="QR Code" /><br/>
+        <img src="./Assets/footer scan.svg" alt="QR Code" /><br />
         <img src="./Assets/footer service.svg" alt="">
       </div>
     </div>
@@ -218,4 +233,5 @@
   </footer>
 
 </body>
+
 </html>

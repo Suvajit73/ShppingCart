@@ -1,185 +1,255 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    color: #111;
-  }
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #111;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  background-color: white; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 nav ul li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500; 
-  }
-  
-  nav ul li a:hover {
-    color: darkred; 
-  }
-  
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: darkred;
+}
+
 
 .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
 }
 
 .search-box {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .search-box input {
-    padding: 8px 30px 8px 10px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 8px 30px 8px 10px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.search-box i {
-    position: absolute;
-    right: 10px;
-    color: gray;
-    pointer-events: none;
+.search-box img {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  cursor: pointer;
 }
-  
-  .little {
-    margin: 1rem 0;
-    padding-left: 165px;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .contact-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  .icon-title {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    margin-bottom: 10px;
-  }
-  .contact-info {
-    flex: 1;
-    min-width: 300px;
-  }
-  .contact-box {
-    border: 1px solid #eee;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-  }
-  .contact-box .icon {
-    font-size: 2rem;
-    color: #d10000;
-  }
-  .contact-form {
-    flex: 2;
-    min-width: 300px;
-  }
-  .contact-form .input-group {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    
-  }
-  
-  .contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: hwb(146 87% 10%); 
-  }
-  .contact-form textarea {
-    height: 150px;
-  }
-  .contact-form button {
-    background-color: #db2c2c;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 640px;
-  }
-  
-  .footer {
-    background-color: #111;
-    color: white;
-    padding: 40px 20px;
+
+.search-bar>img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.little {
+  margin: 1rem 0;
+  padding-left: 165px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-box {
+  border: 1px solid #eee;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.contact-box .icon {
+  font-size: 2rem;
+  color: #d10000;
+}
+
+.contact-form {
+  flex: 2;
+  min-width: 300px;
+}
+
+.contact-form .input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: hwb(146 87% 10%);
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background-color: #db2c2c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 640px;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
 .footer input {
-    width: 100%;
-    padding: 6px;
-    margin: 10px 0;
+  width: 100%;
+  padding: 6px;
+  margin: 10px 0;
 }
 
 .footer button {
-    padding: 6px 12px;
-    background-color: #db3f3f;
-    border: none;
-    color: white;
-    cursor: pointer;
+  padding: 6px 12px;
+  background-color: #db3f3f;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .footer img {
-    width: 100px;
-    margin-top: 10px;
+  width: 100px;
+  margin-top: 15px;
 }
 
 .footer h4 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer p {
-    margin: 5px 0;
-    font-size: 14px;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+
+.footer-subscribe {
+  position: relative;
+  width: 217px;
+  height: 48px;
+  margin: 10px 0;
+}
+
+
+.footer-subscribe input {
+  width: 100%;
+  padding: 8px 40px 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #111;
+  color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+
+.footer-subscribe button {
+  position: absolute;
+  top: 40%;
+  right: 4px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer-subscribe button .send-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+
+
+.footer-subscribe button:hover svg {
+  color: #db3f3f;
 }
 
 .copyright {
-    text-align: center;
-    padding-top: 10px;
-    font-size: 13px;
-    border-top: 1px solid #333;
-    color: #888;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 13px;
+  border-top: 1px solid #333;
+  color: #888;
 }
-  
