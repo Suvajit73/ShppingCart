@@ -17,11 +17,20 @@ btn.addEventListener("click", (e) => {
         return;
     }
 
-  
+
     localStorage.setItem("name", nameValue);
     localStorage.setItem("email", emailValue);
     localStorage.setItem("password", passwordValue);
 
     alert("Account created successfully!");
-    window.location.href = "login.html"; 
+    window.location.href = "login.html";
+});
+
+/* for menubar clicking*/
+
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
 });

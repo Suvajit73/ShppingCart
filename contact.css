@@ -1,3 +1,4 @@
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -7,31 +8,46 @@
 body {
   font-family: Arial, sans-serif;
   color: #111;
+  background-color: #fff;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
+/* HEADER */
 header {
   position: sticky;
   top: 0;
-  z-index: 1000; 
-  background-color: white; 
+  z-index: 1000;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
   padding: 10px 20px;
   border-bottom: 1px solid #ddd;
+}
+
+header h2 {
+  margin: 0;
+}
+
+/* NAVIGATION */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
+}
+
+/* when nav has the class "nav-open", show the menu on mobile */
+nav.nav-open ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
 }
 
 nav ul li {
@@ -48,7 +64,7 @@ nav ul li a:hover {
   color: darkred;
 }
 
-
+/* SEARCH BAR */
 .search-bar {
   display: flex;
   align-items: center;
@@ -79,12 +95,13 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.search-bar>img {
+.search-bar > img {
   width: 35px;
   height: 35px;
   cursor: pointer;
 }
 
+/* CONTACT INFO */
 .little {
   margin: 1rem 0;
   padding-left: 165px;
@@ -125,6 +142,7 @@ nav ul li a:hover {
   color: #d10000;
 }
 
+/* CONTACT FORM */
 .contact-form {
   flex: 2;
   min-width: 300px;
@@ -134,7 +152,6 @@ nav ul li a:hover {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
-
 }
 
 .contact-form input,
@@ -160,6 +177,7 @@ nav ul li a:hover {
   margin-left: 640px;
 }
 
+/* FOOTER */
 .footer {
   background-color: #111;
   color: white;
@@ -201,14 +219,12 @@ nav ul li a:hover {
   font-size: 14px;
 }
 
-
 .footer-subscribe {
   position: relative;
   width: 217px;
   height: 48px;
   margin: 10px 0;
 }
-
 
 .footer-subscribe input {
   width: 100%;
@@ -220,7 +236,6 @@ nav ul li a:hover {
   font-size: 14px;
   box-sizing: border-box;
 }
-
 
 .footer-subscribe button {
   position: absolute;
@@ -240,8 +255,6 @@ nav ul li a:hover {
   height: 16px;
 }
 
-
-
 .footer-subscribe button:hover svg {
   color: #db3f3f;
 }
@@ -252,4 +265,94 @@ nav ul li a:hover {
   font-size: 13px;
   border-top: 1px solid #333;
   color: #888;
+}
+
+/* DARK THEME */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-theme header {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-theme nav ul li a {
+  color: #ffffff;
+}
+
+.dark-theme nav ul li a:hover {
+  color: #ff9999;
+}
+
+.dark-theme .search-box img,
+.dark-theme .search-bar > img {
+  filter: invert(1) brightness(2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .search-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* show burger menu, hide links */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* when ".nav-open" is on <nav>, show links */
+  nav.nav-open ul {
+    display: flex;
+    background-color: transparent;
+    
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .little {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-box input {
+    width: 100%;
+  }
+
+  .contact-form textarea {
+    height: 120px;
+  }
+
+  .footer-subscribe {
+    width: 100%;
+  }
+
+  .footer-subscribe input {
+    padding-right: 30px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
 }

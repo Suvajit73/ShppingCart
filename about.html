@@ -33,8 +33,10 @@
       </div>
       <img src="./Assets/Wishlist.svg" alt="Wishlist" style="width: 35px; height: 35px;" />
       <img src="./Assets/curtIcon.svg" alt="Cart" style="width: 35px; height: 35px;" />
-      <img src="./Assets/user.svg" alt="user" style="width: 35px; height: 35px;" />
+      <ion-icon name="moon-outline" class="dark"></ion-icon>
+
     </div>
+
 
   </header>
 
@@ -231,7 +233,15 @@
       © Copyright Exclusive 2025. All rights reserved.
     </div>
   </footer>
-
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+  
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+  </script>
+  
 </body>
 
 </html>
